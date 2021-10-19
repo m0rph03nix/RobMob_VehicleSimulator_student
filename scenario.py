@@ -3,7 +3,6 @@
 __author__ = 'Raphael Leber'
 
 from vehicles.Bicycle import Bicycle
-from vehicles.TurtleBot import TurtleBot
 from VehicleSimulator import *
 
 # create simulator instance
