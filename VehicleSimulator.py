@@ -12,8 +12,6 @@ BLUE    = (-80, 70)
 GREEN   = (100, 140)
 PURPLE  = (0, -150)
 
-from vehicles.Bicycle import Bicycle
-from vehicles.TurtleBot import TurtleBot
 
 
 class VehicleSimlulator():
@@ -52,24 +50,5 @@ class VehicleSimlulator():
 
 
 
-if __name__ == '__main__':
 
-    # create simulator instance
-    vs = VehicleSimlulator()
-
-    # create vehicle instance
-    bicycle = Bicycle()
-    turtlebot = TurtleBot()
-
-    # Choose one particular vehicle
-    vs.selectVehicle(bicycle)
-
-    # --- SCENARIO ---
-    vs.toPoint( *BLUE )
-    vs.toPoint( *GREEN )
-    vs.toPoint( *PURPLE )
-    vs.turn( pi/4 )
-   
-    # End of Scenario
-    vs.frame.mainloop()
 
