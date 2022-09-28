@@ -14,16 +14,16 @@ from PathTools import PathTools
 class Bicycle(Vehicle):
 
     def __init__(self, x=0, y=0, theta=0, Ks=0.1, Kv=2, L=1.8, steering_max_angle = pi/8, dt = 0.003):
-        self.x = x
-        self.y = y
-        self.theta = theta
-        self.Ks = Ks
-        self.Kv = Kv         
-        self.L = L
-        self.steering_max_angle = steering_max_angle  
-        self.dt = dt
-        self.throttle_min = 400
-        self.throttle_max = 1000        
+        self.x = x          # x position
+        self.y = y          # y position
+        self.theta = theta  # theta orientation
+        self.Ks = Ks        # Steering proportionnal coefficient
+        self.Kv = Kv        # Velocity proportionnal coefficient
+        self.L = L          # Distance between front and back wheel
+        self.steering_max_angle = steering_max_angle  # How much you can turn the front wheel
+        self.dt = dt                # Time of one code cycle
+        self.throttle_min = 400     # Min saturation throttle based of euclidan distance
+        self.throttle_max = 1000    # Max saturation throttle based of euclidan distance
 
 
 
@@ -94,7 +94,7 @@ class Bicycle(Vehicle):
 
         while fabs(s) > eps_angle:
 
-            v = 10 # Because a bicyle/car CAN'T turn without linear velocity
+            v = 10 # Trick... Because a bicyle/car CAN'T turn without linear velocity
             s = PathTools().shortestAngleDiff(phi, self.theta) 
 
             self.model(v, copysign(self.steering_max_angle, s))
