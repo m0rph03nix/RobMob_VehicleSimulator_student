@@ -4,7 +4,7 @@
 
 Une fois pour toutes:  
 ```bash
-git clone git@github.com:m0rph03nix/RobMob_VehicleSimulator_student.git
+git clone https://github.com/m0rph03nix/RobMob_VehicleSimulator_student.git
 cd RobMob_VehicleSimulator_student
 virtualenv venv --python=/usr/bin/python3
 source venv/bin/activate
