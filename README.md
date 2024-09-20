@@ -9,7 +9,6 @@ cd RobMob_VehicleSimulator_student
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
-# si virtualenv pas installé sur votre machine, faire : sudo apt-get install virtualenv
 ```
 
 A chaque chargement du projet dans un nouveau terminal (dans RobMob_VehicleSimulator_student), n'oubliez pas de refaire:
