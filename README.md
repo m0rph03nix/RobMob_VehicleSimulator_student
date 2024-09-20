@@ -6,7 +6,7 @@ Une fois pour toutes:
 ```bash
 git clone git@github.com:m0rph03nix/RobMob_VehicleSimulator_student.git
 cd RobMob_VehicleSimulator_student
-virtualenv venv --python=/usr/bin/python3
+python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
 # si virtualenv pas installé sur votre machine, faire : sudo apt-get install virtualenv
